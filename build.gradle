@@ -1,0 +1,22 @@
+plugins {
+    id 'war'
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.3.20'
+    implementation group: 'org.thymeleaf', name: 'thymeleaf-spring5', version: '3.0.15.RELEASE'
+}
+
+test {
+    useJUnitPlatform()
+}

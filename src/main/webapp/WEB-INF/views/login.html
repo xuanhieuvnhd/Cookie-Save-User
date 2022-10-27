@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie Demo</title>
+</head>
+<body>
+<h1>Đăng nhập</h1>
+<form action="#" th:action="@{/dologin}" th:object="${user}" method="post">
+    <table border="0">
+        <tr>
+            <td><label>Tài khoản</label></td>
+            <td><input type="text" id="email" name="email" placeholder="Nhập email vào đây"
+                       th:value="${cookieValue.value}"/></td>
+        </tr>
+        <tr>
+            <td><label>Mật khẩu</label></td>
+            <td><input type="password" placeholder="Nhập mật khẩu vào đây" th:field="*{password}"/></td>
+        </tr>
+    </table>
+    <input type="submit" value="Đăng nhập"/>
+</form>
+<br>
+<span th:text="${message}"></span>
+<span th:text="${user.email}"></span>
+</body>
+</html>
